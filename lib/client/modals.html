@@ -1,12 +1,10 @@
 <template name="autoformModals">
-	<div class="modal fade" id="afModal">
-		<div class="modal-dialog {{cmModalDialogClass}}">
-			<div class="modal-content">
-				<div class="modal-header">
+	<div class="ui modal" id="afModal">
+				<div class="header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h4 class="modal-title">{{{title}}}</h4>
 				</div>
-				<div class="modal-body">
+				<div class="content">
 					{{#if $and cmCollection cmOperation}}
 					<p>{{{prompt}}}</p>
 					{{#if $neq cmOperation 'remove'}}
@@ -15,15 +13,13 @@
 					{{/if}}
 				</div>
 				{{#if $eq cmOperation 'remove'}}
-				<div class="modal-footer">
+				<div class="actions">
 					{{#if closeButtonContent}}
 					<a role="button" href="#" data-dismiss="modal" class="{{cmCloseButtonClasses}}">{{{closeButtonContent}}}</a>
 					{{/if}}
 					<button class="{{cmButtonClasses}}">{{{buttonContent}}}</button>
 				</div>
 				{{/if}}
-			</div>
-		</div>
 	</div>
 </template>
 
