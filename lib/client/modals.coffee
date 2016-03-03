@@ -178,5 +178,5 @@ Template.afModal.events
 		else
 			Session.set 'cmPrompt', ''
 
-		$('#afModal').data('bs.modal').options.backdrop = t.data.backdrop or true
+		//$('#afModal').data('bs.modal').options.backdrop = t.data.backdrop or true
 		$('#afModal').modal 'show'
